@@ -28,8 +28,8 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_js = {"Job Applicant" : "customazation/job_applicant.js", "Job Opening" : "overrides/job_opening.js" }
+doctype_list_js = {"Job Applicant" : "customazation/job_applicant.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -68,7 +68,7 @@ app_license = "mit"
 # ------------
 
 # before_install = "pro_recruitment.install.before_install"
-# after_install = "pro_recruitment.install.after_install"
+after_install = "pro_recruitment.install.after_install"
 
 # Uninstallation
 # ------------
@@ -114,9 +114,9 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Job Opening": "pro_recruitment.overrides.job_opening.CustomJobOpening"
+}
 
 # Document Events
 # ---------------

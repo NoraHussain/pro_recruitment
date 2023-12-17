@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-28 14:13:59.439043",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_opening",
+  "selected_applicants",
+  "action",
+  "with_criteria",
+  "criteria",
+  "section_break_cc6f",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_cc6f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Recruitment Phase",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "selected_applicants",
+   "fieldtype": "Select",
+   "label": "Selected Applicants",
+   "options": "All\nLong List\nShort List"
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "label": "Action",
+   "options": "Long Listing\nShort Listing"
+  },
+  {
+   "default": "0",
+   "fieldname": "with_criteria",
+   "fieldtype": "Check",
+   "label": "With Criteria"
+  },
+  {
+   "fieldname": "criteria",
+   "fieldtype": "Table",
+   "label": "Criteria",
+   "options": "Applicants Selection Criteria"
+  },
+  {
+   "fieldname": "job_opening",
+   "fieldtype": "Link",
+   "label": "Job Opening",
+   "options": "Job Opening"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-11-28 14:44:53.003096",
+ "modified_by": "Administrator",
+ "module": "Pro Recruitment",
+ "name": "Recruitment Phase",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
