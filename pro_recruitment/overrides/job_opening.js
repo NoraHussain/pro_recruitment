@@ -1,11 +1,10 @@
-
+var fields = [];
 frappe.ui.form.on('Job Opening', {
+    fields_array : [],
     refresh: async function(frm) {
-
-        let labels = await frm.events.call_api();
-
+        fields_array = await frm.events.call_api();
         var df_field_label = frappe.meta.get_docfield("Applicants Selection Criteria", "field_label", cur_frm.doc.name);
-		df_field_label.options =  labels.labels;
+		df_field_label.options =  fields_array.labels;
 		frm.refresh_fields();
     },
 
@@ -18,15 +17,14 @@ frappe.ui.form.on('Job Opening', {
         });
         return result;
     }
-    
   });
 
   frappe.ui.form.on('Applicants Selection Criteria', {
 	field_label: async function(frm, cdt, cdn){
         var d = locals[cdt][cdn];
-        let result = await cur_frm.events.call_api();
-        var indexOfLabel =  result.labels.indexOf(d.field_label);
-        d.field_name =  result.values[indexOfLabel];
-        frm.refresh_fields()
-    }
+        // let result = await cur_frm.events.call_api();
+        var indexOfLabel =  fields_array.labels.indexOf(d.field_label);
+        d.field_name =  fields_array.values[indexOfLabel];
+        frm.refresh_fields();
+    }       
 })

@@ -28,8 +28,8 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"Job Applicant" : "customazation/job_applicant.js", "Job Opening" : "overrides/job_opening.js" }
-doctype_list_js = {"Job Applicant" : "customazation/job_applicant.js"}
+doctype_js = {"Job Applicant" : "overrides/job_applicant.js", "Job Opening" : "overrides/job_opening.js" }
+doctype_list_js = {"Job Applicant" : "overrides/job_applicant.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
